@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;700;800&display=swap');
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+:root{
+
+    /* Primary Colors */
+
+    --Light-red: rgba(255, 87, 87);
+    --Orangey-yellow: rgba(255, 176, 31);
+    --Green-teal: rgba(0, 189, 145);
+    --Cobalt-blue: rgba(17, 37, 212);
+
+    /* Gradients */
+--purple-bg:linear-gradient(to bottom,#7857ff,#2e2be9);
+--circle-bg:linear-gradient(to bottom,#5030cf,rgba(46, 43, 233,0.4));
+    /* Neutral */
+    --white:hsl(0, 0%, 100%);
+--Pale-blue:hsl(221, 100%, 96%);
+--Light-lavender:hsl(241, 100%, 89%);
+--Dark-gray-blue:hsl(224, 30%, 27%);
+
+    /* font weight */
+    --fw-5:font-weight: 500;
+    --fw-7:font-weight: 700;
+    --fw-8:font-weight: 800;
+
+}
+
+/* .fs-18{
+    font-size: 1.125rem;
+} */
+
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+#app{
+    background-color: var(--white);
+    display: grid;
+    grid-template-columns: 45% 1fr;
+    max-width: 1440px;
+}
+
+.purple-side{
+    
+    padding: 30px ;
+    border-radius: 15px;
+    background-image: var(--purple-bg);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    gap: 25px;
+}
+
+.circle{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+background-image: var(--circle-bg); 
+width: 180px;
+height: 180px;
+border-radius: 999px;   
+}
+
+.circle .number{
+    font-size: 3.5rem;
+    font-weight: 700;
+}
+
+.circle .full-result{
+    color: #7857ff;
+    font-weight: 700;
+}
+
+.message{
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.info-result{
+    font-size: 18px;
+    text-align: center;
+}
+
+.white-side{
+    padding: 30px 30px 30px 60px;
+    margin-left: -30px;
+    border-radius: 0px 15px 15px 0px;
+    box-shadow: 1px 7px 50px 1px rgba(120, 87, 255,0.3);
+}
+
+.white-side h2 {
+    margin-bottom: 25px;
+}
+
+.reaction,
+.memory,
+.verbal,
+.visual
+{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color:hsl(224, 30%, 27%) ;
+    
+    
+    
+}
+
+.reaction{
+    background-color:rgba(255, 87, 87,0.2) ;
+    color: rgba(255, 87, 87);
+    font-weight: 800;
+    
+    
+}
+.memory{
+    background-color:rgba(255, 176, 31,0.2) ;
+    color: rgba(255, 176, 31);
+    font-weight: 800;
+    
+}
+.verbal{
+    background-color:rgba(0, 189, 145,0.2) ;
+    color: rgba(0, 189, 145);
+    font-weight: 800;
+}
+.visual{
+    background-color:rgba(17, 37, 212,0.2); 
+    color: rgba(17, 37, 212);
+    font-weight: 800;
+}
+
+.text-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+.points{
+    color: hsl(224, 30%, 27%);
+}
+
+.white-side span{
+    font-weight: 500;
+}
+
+.white-side button{
+    background-color: var(--Dark-gray-blue);
+    color: var(--white);
+    font: 18px'Hanken Grotesk';
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    padding: 15px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: 200ms ease-in-out;
+}
+
+.white-side button:hover{
+    transform: scale(1.03);
+    transition: 200ms ease-in-out;
+    background-image: linear-gradient(to bottom,#7857ff,#2e2be9);
+}
+
+@media screen and (max-width:425px) {
+
+    body{
+        display: flex;
+        align-items: initial;
+    }
+
+    #app{
+        display: grid;
+        grid-template-columns: 100%;
+        
+    }
+
+    .purple-side{
+        border-radius: 0px 0px 15px 15px;
+    }
+}
